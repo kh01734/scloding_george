@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Scolding George",
+    "version": "1.0",
+    "description": "Men's coach George scolds you for wasting energy on Porn.",
+    "permissions": ["activeTab", "scripting", "contextMenus", "tabs"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "web_accessible_resources": [{
+        "resources": ["images/*", "audio/*"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "action": {
+      "default_icon": "images/George.png"
+    },
+    "content_scripts": [
+      {
+      "matches": ["https://www.kitao.bio.titech.ac.jp/", 
+                  "https://jp.pornhub.com/",
+                  "https://www.youtube.com/"],
+      "run_at":"document_start",
+      "js": ["content.js"],
+      "css": ["content.css"]
+      }
+    ]
+}

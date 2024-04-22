@@ -1,0 +1,7 @@
+.center {
+    position: absolute; /* 絶対位置指定 */
+    top: 50%; /* 上端を画面の中央に */
+    left: 50%; /* 左端を画面の中央に */
+    transform: translate(-50%, -50%); /* オブジェクトを中央に移動 */
+  }
+  
